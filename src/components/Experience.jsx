@@ -105,7 +105,7 @@ const Experience = () => {
                 ease-in-out"
                 onClick={() =>
                   window.open(
-                    'https://files.gungj.tech/filebrowser/api/public/dl/RokBDX5X/Resume-Agung-Jodi-Pratama.pdf', //paste the link to your resume here
+                    import.meta.env.VITE_RESUME_DOWNLOAD_URL, 
                     '_blank'
                   )
                 }
@@ -139,7 +139,7 @@ const Experience = () => {
                 ease-in-out"
                 onClick={() =>
                   window.open(
-                    'https://files.gungj.tech/filebrowser/api/public/dl/tvO6na30/LinkedIn-Profile-Agung-Jodi-Pratama.pdf', //paste the link to your resume here
+                    import.meta.env.VITE_PROFILE_DOWNLOAD_URL,
                     '_blank'
                   )
                 }
