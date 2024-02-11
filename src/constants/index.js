@@ -21,6 +21,7 @@ import {
   linkedin,
   ig,
   twitter,
+  github,
 } from '../assets';
 
 export const navLinks = [
@@ -269,6 +270,11 @@ const socials = [
     name: 'twitter',
     link: import.meta.env.VITE_TWITTER_PROFILE_URL,
     icon: twitter
+  },
+  {
+    name: 'github',
+    link: import.meta.env.VITE_GITHUB_PROFILE_URL,
+    icon: github
   },
 ]
 
