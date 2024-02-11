@@ -7,7 +7,6 @@ import worldmap from './backgrounds/world-map.png';
 import logo from './logo/logo.png';
 import logotext from './logo/logo-text-black.png';
 
-import shaq from './personal/shaq.png';
 import me from './personal/me.png';
 
 import backend from './icons/backend.png';
@@ -81,7 +80,6 @@ export {
   worldmap,
   logo,
   logotext,
-  shaq,
   backend,
   ux,
   frontend,
