@@ -67,13 +67,12 @@ const Contact = () => {
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-jet p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadTextLight}>Contact</h3>
+        <h3 className={styles.sectionHeadTextLight}>Contact Me</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-10 flex flex-col gap-6 font-poppins">
+          className="mt-5 flex flex-col gap-6 font-poppins">
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">Your Name</span>
             <input
@@ -104,7 +103,7 @@ const Contact = () => {
           </label>
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">
-              Your Message
+              Message
             </span>
             <textarea
               rows="7"
@@ -145,12 +144,12 @@ const Contact = () => {
             />
           </button>
         </form>
-
+        <p className={`${styles.sectionSubText} mt-10`}>Socials</p>
         <motion.div
           variants={slideIn('left', 'tween', 0.2, 1)}
-          className="mt-10 bg-jet rounded-2xl">
+          className="mt-5 bg-jet rounded-2xl">
         
-          <div className="flex flex-col lg:flex-row gap-5 items-center">
+          <div className="flex flex-row gap-5 justify-start items-center">
             {
               socials.map((social) => (
                 <a href={social.link} rel='noreferrer' target='_blank' key={social.name}>
