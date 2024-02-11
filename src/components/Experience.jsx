@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -23,8 +24,11 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
+        <h3 className="text-dim text-[16px] font-bold font-beckman">
           {experience.date}
+        </h3>
+        <h3 className="text-dim font-bold">
+          {experience.duration}
         </h3>
       </div>
     }
@@ -34,7 +38,7 @@ const ExperienceCard = ({ experience }) => (
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className="w-[60%] h-[60%] object-contain rounded-full"
         />
       </div>
     }>
@@ -42,11 +46,11 @@ const ExperienceCard = ({ experience }) => (
       <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
         {experience.title}
       </h3>
-      <p
-        className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+      <h3
+        className="text-taupe text-[24px] font-bold font-overcameBold tracking-[1px]"
         style={{ margin: 0 }}>
         {experience.company_name}
-      </p>
+      </h3>
     </div>
   </VerticalTimelineElement>
 );
@@ -55,11 +59,8 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
-          What I've done so far
-        </p>
         <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-          Work Experience.
+          Work Experience
         </h2>
       </motion.div>
 
@@ -91,39 +92,76 @@ const Experience = () => {
                 />
               </div>
             }>
-            <button
-              className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
-              onClick={() =>
-                window.open(
-                  'resume link', //paste the link to your resume here
-                  '_blank'
-                )
-              }
-              onMouseOver={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', download);
-              }}>
-              MY RESUME
-              <img
-                src={download}
-                alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
-              />
-            </button>
+
+            <div className='flex items-center gap-5'>
+              <button
+                className="live-demo flex justify-between 
+                sm:text-[18px] text-[14px] text-timberWolf 
+                font-bold font-beckman items-center py-5 pl-3 pr-3 
+                whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
+                w-[125px] h-[46px] rounded-[10px] bg-jetLight 
+                hover:bg-battleGray 
+                hover:text-eerieBlack transition duration-[0.2s] 
+                ease-in-out"
+                onClick={() =>
+                  window.open(
+                    'https://files.gungj.tech/filebrowser/api/public/dl/RokBDX5X/Resume-Agung-Jodi-Pratama.pdf', //paste the link to your resume here
+                    '_blank'
+                  )
+                }
+                onMouseOver={() => {
+                  document
+                    .querySelector('.download-btn')
+                    .setAttribute('src', downloadHover);
+                }}
+                onMouseOut={() => {
+                  document
+                    .querySelector('.download-btn')
+                    .setAttribute('src', download);
+                }}>
+                My Resume
+                <img
+                  src={download}
+                  alt="download"
+                  className="download-btn sm:w-[26px] sm:h-[26px] 
+                  w-[23px] h-[23px] object-contain"
+                />
+              </button>
+
+              <button
+                className="live-demo flex justify-between 
+                sm:text-[18px] text-[14px] text-timberWolf 
+                font-bold font-beckman items-center py-5 pl-3 pr-3 
+                whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
+                w-[125px] h-[46px] rounded-[10px] bg-jetLight 
+                hover:bg-battleGray 
+                hover:text-eerieBlack transition duration-[0.2s] 
+                ease-in-out"
+                onClick={() =>
+                  window.open(
+                    'https://files.gungj.tech/filebrowser/api/public/dl/tvO6na30/LinkedIn-Profile-Agung-Jodi-Pratama.pdf', //paste the link to your resume here
+                    '_blank'
+                  )
+                }
+                onMouseOver={() => {
+                  document
+                    .querySelector('.download-btn')
+                    .setAttribute('src', downloadHover);
+                }}
+                onMouseOut={() => {
+                  document
+                    .querySelector('.download-btn')
+                    .setAttribute('src', download);
+                }}>
+                My Profile
+                <img
+                  src={download}
+                  alt="download"
+                  className="download-btn sm:w-[26px] sm:h-[26px] 
+                  w-[23px] h-[23px] object-contain"
+                />
+              </button>
+            </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
@@ -131,4 +169,5 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, 'work');
+const ExperienceSectionWrapper = SectionWrapper(Experience, 'work');
+export default ExperienceSectionWrapper;

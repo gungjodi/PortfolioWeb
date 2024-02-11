@@ -15,8 +15,13 @@ const Tech = () => {
 
       <div className="flex flex-wrap justify-center gap-10 mt-14">
         {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
+          <div key={technology.name}>
+            <div className="w-28 h-28" title={technology.name}>
+              <BallCanvas icon={technology.icon} />
+            </div>
+            <div className='text-center'>
+              <p className='font-medium font-poppins'>{technology.name}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -24,4 +29,5 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, '');
+const TechSectionWrapper = SectionWrapper(Tech, 'tech') 
+export default TechSectionWrapper;

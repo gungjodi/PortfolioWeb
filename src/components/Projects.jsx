@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
@@ -40,7 +41,7 @@ const ProjectCard = ({
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
         whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
+        absolute lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
         leading-none z-20">
             {name}
           </h3>
@@ -120,7 +121,7 @@ const Projects = () => {
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
       </motion.div>
 
-      <div className="w-full flex">
+      {/* <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
@@ -130,7 +131,7 @@ const Projects = () => {
           intricate challenges, adapt to various technologies, and efficiently
           oversee projects.
         </motion.p>
-      </div>
+      </div> */}
 
       <motion.div
         variants={staggerContainer}
@@ -154,4 +155,5 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, 'projects');
+const ProjectsSectionWrapper = SectionWrapper(Projects, 'projects');
+export default ProjectsSectionWrapper;
