@@ -68,6 +68,7 @@ import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
 import allure from './projects/allure.png';
+import testng from './projects/testng.png';
 
 export {
   me,
@@ -133,4 +134,5 @@ export {
   sqa,
   fullstack,
   engineer,
+  testng,
 };

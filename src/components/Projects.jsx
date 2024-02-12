@@ -14,6 +14,7 @@ const ProjectCard = ({
   image,
   repo,
   demo,
+  buttonTitle = "LIVE DEMO",
   index,
   active,
   handleClick,
@@ -40,9 +41,9 @@ const ProjectCard = ({
         <div className="flex items-center justify-start pr-[4.5rem]">
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
-        whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20">
+              whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
+              absolute lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
+              leading-none z-20">
             {name}
           </h3>
         </div>
@@ -80,8 +81,8 @@ const ProjectCard = ({
               className="live-demo flex justify-between 
               sm:text-[16px] text-[14px] text-timberWolf 
               font-bold font-beckman items-center py-5 pl-2 pr-3 
-              whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
-              w-[125px] h-[46px] rounded-[10px] glassmorphism 
+              whitespace-nowrap gap-1 sm:h-[50px] 
+              h-[46px] rounded-[10px] glassmorphism 
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
@@ -102,7 +103,7 @@ const ProjectCard = ({
                 className="btn-icon sm:w-[34px] sm:h-[34px] 
                   w-[30px] h-[30px] object-contain"
               />
-              LIVE DEMO
+              {buttonTitle}
             </button>
           </div>
         </>
@@ -112,7 +113,7 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  const [active, setActive] = useState('project-2');
+  const [active, setActive] = useState('project-1');
 
   return (
     <div className="-mt-[6rem]">

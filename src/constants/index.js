@@ -22,6 +22,7 @@ import {
   ig,
   twitter,
   github,
+  testng,
 } from '../assets';
 
 export const navLinks = [
@@ -34,10 +35,10 @@ export const navLinks = [
     id: 'work',
     title: 'Works',
   },
-  // {
-  //   id: 'projects',
-  //   title: 'Projects',
-  // },
+  {
+    id: 'projects',
+    title: 'Projects',
+  },
   {
     id: 'contact',
     title: 'Contact',
@@ -162,6 +163,25 @@ const projects = [
     image: allure,
     repo: 'https://github.com/gungjodi/allure-service-go',
     demo: 'https://apps.gungj.tech/allure-service/swagger',
+  },
+  {
+    id: 'project-2',
+    name: 'TestNG Specific Starter',
+    description: 'Java library to execute specific test using TestNG',
+    tags: [
+      {
+        name: 'Java',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'TestNG',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: testng,
+    repo: 'https://github.com/gungjodi/testng-specific',
+    demo: 'https://central.sonatype.com/artifact/io.github.gungjodi/testng-specific-starter',
+    buttonTitle: 'SEE PACKAGE'
   },
   // {
   //   id: 'project-2',
